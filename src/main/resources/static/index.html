@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Study02</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="static/favicon.ico" />
+<style>
+body {
+  background-color: wheat;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+caption {
+  padding: 5px;
+}
+table td {
+  padding: 3px;
+  border: 1px solid black;
+}
+.row-green:hover {
+  background-color: palegreen;
+}
+.col-one-third {
+  width: 33%
+}
+.col-green {
+  width: 33%
+}
+.col-green:hover {
+  background-color: palegreen;
+}
+.col-two-thirds {
+  width: 67%
+}
+</style>	
+</head>
+<body>
+<h1>Study02</h1>
+<table>
+<tr class="row-green"><td class="col-one-third">
+	Load sample dataset
+</td><td class="col-two-thirds">
+	<a href="/loadSampleDataset">/loadSampleDataset</a>
+</td></tr>
+</table>
+
+<p>
+
+<table>
+<tr class="row-green"><td class="col-one-third">
+	Find <b>department and employees</b> by department name
+</td><td class="col-two-thirds">
+	<a href="/aggregate/find/findByDepartmentName?departmentName=D-Name-1">
+	/aggregate/find/findByDepartmentName?departmentName=D-Name-1</a><br/>
+	&nbsp;<br/>
+	<a href="/aggregateFlux/find/findByDepartmentName?departmentName=D-Name-1">
+	/aggregateFlux/find/findByDepartmentName?departmentName=D-Name-1</a>
+</td></tr>
+<tr class="row-green"><td class="col-one-third">
+	Find <b>all departments</b>
+</td><td class="col-two-thirds">
+	<a href="/departments">/departments</a>
+</td></tr>
+ <tr class="row-green"><td class="col-one-third">
+	Find <b>department</b> by name
+</td><td class="col-two-thirds">
+	<a href="/departments/find/findByName?name=D-Name-1">/departments/find/findByName?name=D-Name-1</a>
+</td></tr>
+<tr class="row-green"><td class="col-one-third">
+	Find <b>all employees</b>
+</td><td class="col-two-thirds">
+	<a href="/employees">/employees</a>
+</td></tr>
+<tr class="row-green"><td class="col-one-third">
+	Find <b>employee</b> by first and last name
+</td><td class="col-two-thirds">
+	<a href="/employees/find/findByFirstNameAndLastName?firstName=EF-Name-101&lastName=EL-Name-101">
+	/employees/find/findByFirstNameAndLastName?firstName=EF-Name-101&amp;lastName=EL-Name-101</a>
+</td></tr>
+</table>
+
+<p>
+<hr/>
+
+<table>
+<caption>The SpringBoot <q><b>Actuator</b></q> links</caption>
+<tr><td class="col-green">
+	<a href="/actuator">List of Actuator Endpoints</a><br/>
+</td><td class="col-green">
+	<a href="/actuator/health">Application Health</a><br/>
+</td><td class="col-green">
+	<a href="/actuator/mappings">URL Mappings</a><br/>
+</td></tr>
+<tr><td class="col-green">
+	<a href="/actuator/metrics">Metrics</a><br/>
+</td><td class="col-green">
+	<a href="/actuator/metrics/http.server.requests">Metrics 'http.server.requests'</a><br/>
+</td><td class="col-green">
+	<a href="/actuator/beans">Beans</a><br/>
+</td></tr>
+<tr><td class="col-green">
+	<a href="/actuator/configprops">Configuration Properties</a><br/>
+</td><td class="col-green">
+	<a href="/actuator/env">Environment</a><br/>
+</td><td class="col-green">
+	&nbsp;
+</td></tr>
+</table>
+
+<p>
+
+<table>
+<caption>The <q><b>Search</b></q> links (created by 'ReactiveMongoRepository')</caption>
+<tr><td class="col-green">
+	<a href="/departments/search">/departments/search</a>
+</td><td class="col-green">
+	<a href="/aggregateRelations/search">/aggregateRelations/search</a>
+</td><td class="col-green">
+	&nbsp;
+</td></tr>
+</table>
+
+<p>
+
+<table>
+<caption>The <q><b>Application-Level Profile Semantics</b></q> links</caption>
+<tr><td class="col-green">
+	<a href="/profile/departments">/profile/departments</a>
+</td><td class="col-green">
+	<a href="/profile/employees">/profile/employees</a>
+</td><td class="col-green">
+	<a href="/profile/aggregateRelations">/profile/aggregateRelations</a>
+</td></tr>
+</table>
+
+<p>
+<hr/>
+</body>
+</html>
