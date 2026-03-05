@@ -1,0 +1,17 @@
+spring:
+  mongodb:
+    host: mongo
+    username: docker
+    password: mongopw
+    authentication-database: admin
+  jackson:
+    serialization:
+      indent_output: true
+  output:
+    ansi:
+      enabled: always
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
